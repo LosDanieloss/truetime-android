@@ -7,7 +7,6 @@ import android.util.Log;
 import com.instacart.library.truetime.TrueTime;
 import com.instacart.library.truetime.TrueTimeRx;
 
-import java.io.IOException;
 import java.util.Date;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -53,7 +52,7 @@ public class App extends Application {
                         .withSharedPreferencesCache(App.this)
                         .withConnectionTimeout(3_1428)
                         .initialize();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 Log.e(TAG, "something went wrong when trying to initialize TrueTime", e);
             }

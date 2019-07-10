@@ -18,7 +18,7 @@ package com.instacart.library.truetime;
  */
 
 import android.os.SystemClock;
-import java.io.IOException;
+
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -90,7 +90,7 @@ public class SntpClient {
         int serverResponseDelayMax,
         int timeoutInMillis
     )
-        throws IOException {
+        throws Exception {
 
         DatagramSocket socket = null;
 

@@ -4,7 +4,6 @@ import android.content.Context;
 
 import org.reactivestreams.Publisher;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
@@ -224,7 +223,7 @@ public class TrueTimeRx
                                           try {
                                               o.onNext(requestTime(singleIpHostAddress));
                                               o.onComplete();
-                                          } catch (IOException e) {
+                                          } catch (Exception e) {
                                               o.tryOnError(e);
                                           }
                                       }
